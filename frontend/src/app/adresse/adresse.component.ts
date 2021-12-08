@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-adresse',
@@ -17,7 +17,7 @@ export class AdresseComponent implements OnInit {
   profileForme = new FormGroup({
     firstName: new FormControl(''),
     name: new FormControl(''),
-    adress: new FormGroup({
+    adress: new FormControl(''),
       cp: new FormControl(''),
       city: new FormControl(''),
       country: new FormControl(''),
@@ -27,8 +27,15 @@ export class AdresseComponent implements OnInit {
       login: new FormControl(''),
       //confirmPassword: new FormControl(''),
       password: new FormControl('')
-    })
+    
   });
+
+  isValid:boolean=false;
+
+  submitForm(){
+    this.isValid = this.profileForme.valid;
+  }
+
 /*
   $( "form" ).submit(function( event ) {
     if ( $( "password" ) !== $( "confirmpassword" ) ) {

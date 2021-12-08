@@ -8,6 +8,9 @@ import { AdresseComponent } from './adresse/adresse.component';
 import { FooterComponent } from './footer/footer.component';
 import { TetiereComponent } from './tetiere/tetiere.component';
 import { RecapitulatifComponent } from './recapitulatif/recapitulatif.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VerificationFormulaireDirective } from './verification-formulaire.directive';
+
 
 @NgModule({
   declarations: [
@@ -16,11 +19,13 @@ import { RecapitulatifComponent } from './recapitulatif/recapitulatif.component'
     AdresseComponent,
     FooterComponent,
     TetiereComponent,
-    RecapitulatifComponent
+    RecapitulatifComponent,
+    VerificationFormulaireDirective
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
