@@ -10,6 +10,7 @@ import { TetiereComponent } from './tetiere/tetiere.component';
 import { RecapitulatifComponent } from './recapitulatif/recapitulatif.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { VerificationFormulaireDirective } from './verification-formulaire.directive';
+import { PhoneNumberPipe } from './phone-number.pipe';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { VerificationFormulaireDirective } from './verification-formulaire.direc
     FooterComponent,
     TetiereComponent,
     RecapitulatifComponent,
-    VerificationFormulaireDirective
+    VerificationFormulaireDirective,
+    PhoneNumberPipe
   ],
   imports: [
     BrowserModule,
